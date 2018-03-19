@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.atguigu.mapper.SkuMapper">
+	<select id="select_sku_class2" resultType="com.atguigu.bean.OBJECT_T_MALL_SKU">
+		select * from
+		t_mall_sku sku,t_mall_product spu where sku.shp_id = spu.id
+		and spu.flbh2 = #{i}
+	</select>
+</mapper>
